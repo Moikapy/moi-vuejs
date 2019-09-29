@@ -1,0 +1,15 @@
+ 
+version: '3'
+services:
+  dev:
+    build: .
+    command: yarn serve
+    volumes:
+      - .:/moi-vue/
+      - /moi-vue/node_modules
+    working_dir: /moi-vue/
+    ports:
+      - '3030:3030'
+      - '8000:8000'
+      - '8080:8080'
+      - '8081:8081'
